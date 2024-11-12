@@ -57,9 +57,29 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
-### Getting Started
+## Getting Started
 
-First, run the development server:
+To install and run the app, you will need to have Node.js and npm (the Node.js package manager) installed on your machine.
+
+1. Clone the repository to your local machine:
+
+```bash
+git clone https://github.com/viraj-perera-dev/lorem-johnny.com.git
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd lorem-johnny.com
+```
+
+3. Install the dependencies:
+
+```bash
+npm install
+```
+
+4. Start the app:
 
 ```bash
 npm run dev
