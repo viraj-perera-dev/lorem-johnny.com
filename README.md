@@ -2,6 +2,8 @@
 
 Effortlessly get random or profession-based images with simple URLs. Perfect for placeholders or showcasing your content.
 
+[Visit Documentation](https://www.lorem-johnny.com/)
+
 ## How It Works
 
 Our image generator allows you to fetch random or profession-based images by simply accessing specific URLs. Ideal for dynamic content!
