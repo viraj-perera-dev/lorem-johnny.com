@@ -1,41 +1,66 @@
+# Welcome to Lorem-Jhonny Image Generator
+
+Effortlessly get random or profession-based images with simple URLs. Perfect for placeholders or showcasing your content.
+
+## How It Works
+
+Our image generator allows you to fetch random or profession-based images by simply accessing specific URLs. Ideal for dynamic content!
+
+### Get a Random Image
+
+Access a random image by calling the `/random` route:
+
+[Random Image](https://www.lorem-johnny.com/api/random-image)
+
+### Get a Profession-Based Image
+
+Access images for specific professions by calling the `/random/:profession` route:
+
+[Random Image](https://www.lorem-johnny.com/api/cop)
+
+
+For example, this URL gives you an image of a cop.
+
+### View all available professions
+
+[List of Available Professions (if available)](https://www.lorem-johnny.com/professions) *(Optional link to list of professions)*
+
+## Example Usage
+
+### Random Image
+
+Click below to refresh and get a new random image:
+
+[Refresh Random Image](https://www.lorem-johnny.com/api/random-image)
+
+### Profession Image
+
+Enter a profession below to view the corresponding image:
+
+URL: `https://www.lorem-johnny.com/api/`  
+e.g., `doctor`  
+This URL generates an image for the specified profession.
+
+[Profession Image](https://www.lorem-johnny.com/api/doctor)
+
+## Support Lorem-Jhonny 🙏
+
+If you find Lorem-Jhonny useful and would like to support the page, consider buying us a coffee! ☕ Every little bit helps us keep improving and adding new features.
+
+[Buy Me a Coffee](https://buymeacoffee.com/virajperera)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+
+## Project Information
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
-## Getting Started
+### Getting Started
 
 First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
-# lorem-jhonny.com
