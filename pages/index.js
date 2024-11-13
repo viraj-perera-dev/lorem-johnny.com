@@ -43,7 +43,7 @@ export default function Home() {
       <Head>
         <title>Lorem Jhonny Image Generator</title>
         <meta name="description" content="Generate random or profession-based images with simple URLs. Perfect for placeholders and dynamic content." />
-        <meta property="og:title" content="Lorem-Jhonny Image Generator" />
+        <meta property="og:title" content="Lorem-Johnny Image Generator" />
         <meta property="og:description" content="Effortlessly get random or profession-based images with simple URLs. Perfect for placeholders or showcasing your content." />
         <meta property="og:image" content="https://www.lorem-johnny.com/api/random-image" />
         <meta property="og:url" content="https://www.lorem-johnny.com" />
@@ -57,16 +57,33 @@ export default function Home() {
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <meta name="apple-mobile-web-app-title" content="Lorem Johnny" />
         <link rel="manifest" href="/site.webmanifest" />
-        
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){
+                w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});
+                var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+                j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-WBCXK36J');
+            `
+          }}
+        ></script>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7812738073531507" crossorigin="anonymous"></script>
       </Head>
+      <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBCXK36J"
+          height="0" width="0" style={{display: 'none', visibility: 'hidden'}}></iframe>
+      </noscript>
       <div className="font-sans bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 min-h-screen flex items-center justify-center">
         {/* Content Container */}
         <div className="w-full max-w-4xl px-8 py-12 bg-white rounded-3xl shadow-2xl">
           {/* Hero Section */}
           <header className="text-center mb-12">
             <h1 className="text-5xl font-extrabold leading-tight text-gray-900 tracking-wide">
-              Welcome to <span className="text-yellow-400">Lorem-Jhonny</span> Image Generator
+              Welcome to <span className="text-yellow-400">Lorem-Johnny</span> Image Generator
             </h1>
             <p className="mt-4 text-xl text-gray-700">
               Effortlessly get random or profession-based images with simple URLs. Perfect for placeholders or showcasing your content.
@@ -185,8 +202,8 @@ export default function Home() {
           {/* Buy Me a Coffee Section */}
           <section className="bg-gray-100 py-12 mt-12 rounded-xl shadow-lg">
             <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-gray-800">Support Lorem-Jhonny 🙏</h2>
-              <p className="text-lg text-gray-600 mt-4">If you find Lorem-Jhonny useful and would like to support the page, consider buying us a coffee! ☕ Every little bit helps us keep improving and adding new features.</p>
+              <h2 className="text-3xl font-bold text-gray-800">Support Lorem-Johnny 🙏</h2>
+              <p className="text-lg text-gray-600 mt-4">If you find Lorem-Johnny useful and would like to support the page, consider buying us a coffee! ☕ Every little bit helps us keep improving and adding new features.</p>
             </div>
 
             <div className="flex justify-center items-center space-x-6">
@@ -203,7 +220,7 @@ export default function Home() {
 
           {/* Footer */}
           <footer className="bg-gray-900 text-white py-8 mt-12 text-center rounded-b-3xl">
-            <p>&copy; {new Date().getFullYear()} lorem-jhonny.com All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} lorem-johnny.com All rights reserved.</p>
           </footer>
         </div>
       </div>
