@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://lorem-johnny.com/sitemap.xml
