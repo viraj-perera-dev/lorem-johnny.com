@@ -44,7 +44,7 @@ export default function Professions() {
       </noscript>
     <div className="font-sans bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 min-h-screen flex items-center justify-center">
       <div className="w-full max-w-4xl px-8 py-12 bg-white rounded-3xl shadow-2xl">
-        <section className="bg-gray-100 py-12 mt-12 rounded-xl shadow-lg">
+        <section className="bg-gray-100 py-12 mt-12 mb-12 rounded-xl shadow-lg">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-800">Available Professions</h2>
             <p className="text-lg text-gray-600 mt-4">Explore the list of professions for which you can get an image:</p>
@@ -61,7 +61,7 @@ export default function Professions() {
                   className="rounded-lg shadow-lg mx-auto"
                 />
                 <p className="text-xl mt-4 text-gray-800">{profession.charAt(0) + profession.slice(1)}</p>
-                <p className="text-gray-500">URL: <code className="text-gray-800">{`https://www.lorem-johnny.com/api/${profession}`}</code></p>
+                <p className="text-gray-500">URL: <code className="text-gray-800">{`lorem-johnny.com/api/${profession}`}</code></p>
               </div>
             ))}
           </div>
