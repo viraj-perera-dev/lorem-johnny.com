@@ -1,0 +1,2 @@
+google.com, pub-7812738073531507, DIRECT, f08c47fec0942fa0
+smartyads.com, 20310, DIRECT, fd2bde0ff2e62c5d
