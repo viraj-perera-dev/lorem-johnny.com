@@ -19,3 +19,30 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes move-right-left {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes move-left-right {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+.animate-hand-move {
+  animation: move-right-left 1s infinite ease-in-out;
+}
+
+.animate-hand-move-reverse {
+  animation: move-left-right 1s infinite ease-in-out;
+}
+

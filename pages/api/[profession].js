@@ -1,7 +1,13 @@
 import path from 'path';
 import fs from 'fs';
-import { createCanvas, loadImage } from 'canvas'; // Install the 'canvas' package
+import { createCanvas, loadImage, registerFont } from 'canvas'; // Install the 'canvas' package
 import imageMap from '../../utils/imageMap'; // Ensure this file exists
+
+const arialFontPath = path.join(process.cwd(), 'public/fonts/arial-font/arial.ttf');
+
+// Register the font with a family name
+registerFont(arialFontPath, { family: 'Arial' });
+
 
 export default async function handler(req, res) {
   const { profession } = req.query; // Extract profession from URL
@@ -38,8 +44,8 @@ export default async function handler(req, res) {
       // Add two-line text below the image
       const line1 = `Oops... I can't be a ${profession}`;
       const line2 = `But I'm working on it... hardly!`;
-      ctx.fillStyle = 'black'; // Text color
-      ctx.font = '20px Arial'; // Font style and size
+      ctx.fillStyle = 'black';
+      ctx.font = '20px Arial';
       ctx.textAlign = 'center';
 
       // Draw the text

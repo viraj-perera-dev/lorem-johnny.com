@@ -37,7 +37,6 @@ export default function RandomImagePage() {
             `
           }}
         ></script>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7812738073531507" crossorigin="anonymous"></script>
       </Head>
       <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBCXK36J"
