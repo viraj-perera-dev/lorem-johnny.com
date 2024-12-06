@@ -3,7 +3,8 @@ import Head from 'next/head';
 import { useState } from 'react';
 import { FaHandPointRight, FaRegCopy, FaCheck } from "react-icons/fa";
 import { FaHandPointLeft } from "react-icons/fa";
-
+import LeftBanner from './components/LeftBanner';
+import RightBanner from './components/RightBanner';
 
 
 export default function Home() {
@@ -111,13 +112,15 @@ export default function Home() {
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBCXK36J"
           height="0" width="0" style={{display: 'none', visibility: 'hidden'}}></iframe>
       </noscript>
-      <div className="font-sans bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 min-h-screen flex items-center justify-center">
+      <div className="relative font-sans bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 min-h-screen flex items-center justify-center">
         {/* Content Container */}
-        <div className="w-full max-w-4xl my-20 bg-white rounded-3xl shadow-2xl">
+        <LeftBanner />
+        <RightBanner />
+        <div className="w-full 2xl:max-w-4xl max-w-3xl my-5 bg-white rounded-3xl shadow-2xl">
           {/* Hero Section */}
           <header className="text-center mb-12 pt-10 px-10">
-            <h1 className="text-5xl font-extrabold leading-tight text-gray-900 tracking-wide">
-              Welcome to <span className="text-yellow-400">Lorem-Johnny</span> Image Generator
+            <h1 className="text-5xl font-extrabold leading-tight text-indigo-500 tracking-wide">
+              Welcome to <span className="text-pink-500">Lorem Johnny</span> Image Generator
             </h1>
             <p className="mt-4 text-xl text-gray-700">
               Effortlessly get random or profession-based images with simple URLs. Perfect for placeholders or showcasing your content.
@@ -126,7 +129,7 @@ export default function Home() {
 
           {/* How it Works Section */}
           <section className="mb-12">
-            <h2 className="text-4xl font-semibold text-gray-900 mb-8 text-center">How It Works</h2>
+            <h2 className="text-4xl font-semibold text-pink-500 mb-8 text-center">How It Works</h2>
             <p className="text-lg text-gray-600 mb-8 text-center px-10">
               Our image generator allows you to fetch random or profession-based images by simply accessing specific URLs. Ideal for dynamic content!
             </p>
@@ -189,7 +192,7 @@ export default function Home() {
 
           {/* Example Section */}
           <section className="px-4 py-8">
-            <h2 className="text-4xl font-semibold text-gray-900 mb-8 text-center">Example Usage</h2>
+            <h2 className="text-4xl font-semibold text-pink-500 mb-8 text-center">Example Usage</h2>
 
             <div className="space-y-12">
               {/* Random Image Section */}
@@ -255,7 +258,7 @@ export default function Home() {
           {/* Buy Me a Coffee Section */}
           <section className="bg-gray-100 py-12 mt-12 rounded-xl shadow-lg mx-10">
             <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-gray-800">Support lorem-johnny.com 🙏</h2>
+              <h2 className="text-3xl font-bold text-indigo-500">Support lorem-johnny.com 🙏</h2>
               <p className="text-lg text-gray-600 mt-4 mx-10">If you find Lorem-Johnny useful and would like to support the page, consider buying us a coffee! ☕ Every little bit helps us keep improving and adding new features.</p>
             </div>
 
@@ -264,7 +267,7 @@ export default function Home() {
                 href="https://buymeacoffee.com/virajperera"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-yellow-400 text-gray-800 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-500 transition duration-300"
+                className="bg-[#fc5185] text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:scale-[1.05] transition duration-300"
               >
                 Buy Me a Coffee
               </a>

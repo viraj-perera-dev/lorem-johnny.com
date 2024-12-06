@@ -44,5 +44,20 @@ body {
 
 .animate-hand-move-reverse {
   animation: move-left-right 1s infinite ease-in-out;
+}@keyframes shake {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  75% {
+    transform: rotate(-3deg);
+  }
 }
-
+.shake-animation {
+  animation: shake 1s ease-in-out infinite;
+}

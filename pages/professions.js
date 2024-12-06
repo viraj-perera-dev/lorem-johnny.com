@@ -45,7 +45,7 @@ export default function Professions() {
 
           <section className=" mt-6 mb-12">
             <div className="text-center my-16">
-              <h2 className="text-3xl font-bold text-gray-800">Available Professions</h2>
+              <h2 className="text-3xl font-bold text-indigo-500">Available Professions</h2>
               <p className="text-lg text-gray-600 mt-4">Explore the list of professions for which you can get an image:</p>
             </div>
 
@@ -59,8 +59,10 @@ export default function Professions() {
                     height={200}
                     className="rounded-lg shadow-lg mx-auto"
                   />
-                  <p className="text-xl mt-4 text-gray-800">{profession.charAt(0) + profession.slice(1)}</p>
-                  <p className="text-gray-500">URL: <code className="text-gray-800">{`https://lorem-johnny.com/api/${profession}`}</code></p>
+                  <a href={`https://lorem-johnny.com/api/${profession}`} target="_blank" rel="noopener noreferrer" 	className="text-gray-500">
+                    <p className="text-xl mt-4 text-gray-800">/{profession.charAt(0) + profession.slice(1)}</p>
+                    <code className="text-indigo-600">{`view`}</code>
+                  </a>
                 </div>
               ))}
             </div>
