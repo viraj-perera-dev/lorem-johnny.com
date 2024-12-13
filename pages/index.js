@@ -144,7 +144,7 @@ export default function Home() {
               <div className="bg-white p-8 rounded-xl border shadow-lg">
                 <h3 className="text-2xl font-semibold text-indigo-600 mb-4">Get a Random Image</h3>
                 <p className="text-gray-700 mb-4">Access a random image by calling the `/random` route:</p>
-                <div className="relative flex-row flex items-center justify-center">
+                <div className="relative flex-row flex items-center justify-start">
                   <code className="bg-gray-200 text-sm xl:text-lg px-8 py-4 rounded-lg text-gray-800 text-start xl:text-center">
                     <a href="https://www.lorem-johnny.com/api/random-image" target="_blank" rel="noopener noreferrer">
                         https://www.lorem-johnny.com/api/random-image
@@ -152,7 +152,7 @@ export default function Home() {
                   </code>
                   <button
                       onClick={() => copyToClipboard(randomImageSrc)}
-                      className="ms-5 text-indigo-600 right-10 mt-1 absolute"
+                      className="ms-5 text-indigo-600"
                     >
                       {copiedLink === randomImageSrc ? <FaCheck/> : <FaRegCopy/>}
                     </button>
@@ -173,7 +173,7 @@ export default function Home() {
                 <p className="text-gray-700 mb-4">
                   Access images for specific professions by calling the <code className="font-bold">/random/:profession</code> route:
                 </p>
-                <div className="relative flex-row flex items-center justify-center">
+                <div className="relative flex-row flex items-center justify-star">
                   <code className="bg-gray-200 text-sm xl:text-lg px-8 py-4 rounded-lg text-gray-800 text-start xl:text-center">
                     <a href="https://www.lorem-johnny.com/api/policeman" target="_blank" rel="noopener noreferrer">
                       https://www.lorem-johnny.com/api/policeman
@@ -181,7 +181,7 @@ export default function Home() {
                   </code>
                     <button
                       onClick={() => copyToClipboard('https://www.lorem-johnny.com/api/policeman')}
-                      className="ms-5 text-indigo-600 right-10 mt-1 absolute"
+                      className="ms-5 text-indigo-600"
                     >
                       {copiedLink === 'https://www.lorem-johnny.com/api/policeman' ? <FaCheck/> : <FaRegCopy/>}
                     </button>
@@ -275,7 +275,7 @@ export default function Home() {
                 </div>
                 <p className="text-gray-500 m-4">This URL generates an image for the specified profession.</p>
                 <div className="flex items-center justify-center space-x-4 mb-4">
-                  <span className="text-gray-500 bg-gray-200 px-4 py-2 rounded-lg text-[0.8rem]">
+                  <span className="text-gray-500 bg-gray-200 px-4 py-4 rounded-lg text-[0.8rem]">
                     https://www.lorem-johnny.com/api/
                   </span>
                   <input
