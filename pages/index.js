@@ -5,6 +5,12 @@ import { FaHandPointRight, FaRegCopy, FaCheck } from "react-icons/fa";
 import { FaHandPointLeft } from "react-icons/fa";
 import LeftBanner from './components/LeftBanner';
 import RightBanner from './components/RightBanner';
+import HorizontalBanner from './components/HorizontalBanner';
+import HorizontalHostinger from '../public/assets/affiliates/hostinger/horizontal-banner.png';
+import HorizontalSaily from '../public/assets/affiliates/saily/saily-banners-affordable-esim-728x90.png';
+import HorizontalHostingerMobile from '../public/assets/affiliates/hostinger/mobile_banner.png';
+import HorizontalSailyMobile from '../public/assets/affiliates/saily/mobile_banner.png';
+import { IoMdSwap } from 'react-icons/io';
 
 
 export default function Home() {
@@ -116,10 +122,10 @@ export default function Home() {
         {/* Content Container */}
         <LeftBanner />
         <RightBanner />
-        <div className="w-full 2xl:max-w-4xl max-w-3xl my-5 bg-white rounded-3xl shadow-2xl">
+        <div className="w-full 2xl:max-w-4xl max-w-3xl mt-5 bg-gray-50 rounded-t-3xl shadow-2xl">
           {/* Hero Section */}
           <header className="text-center mb-12 pt-10 px-10">
-            <h1 className="text-5xl font-extrabold leading-tight text-indigo-500 tracking-wide">
+            <h1 className="text-4xl xl:text-5xl font-extrabold leading-tight text-indigo-500 tracking-wide">
               Welcome to <span className="text-pink-500">Lorem Johnny</span> Image Generator
             </h1>
             <p className="mt-4 text-xl text-gray-700">
@@ -134,42 +140,51 @@ export default function Home() {
               Our image generator allows you to fetch random or profession-based images by simply accessing specific URLs. Ideal for dynamic content!
             </p>
 
-            <div className="space-y-8 mx-10">
-              <div className="bg-gray-50 p-8 rounded-xl shadow-lg">
+            <div className="space-y-8 xl:mx-10">
+              <div className="bg-white p-8 rounded-xl border shadow-lg">
                 <h3 className="text-2xl font-semibold text-indigo-600 mb-4">Get a Random Image</h3>
                 <p className="text-gray-700 mb-4">Access a random image by calling the `/random` route:</p>
-                <div className="relative">
-                  <code className="bg-gray-200 text-lg px-8 py-4 rounded-lg text-gray-800 text-center flex justify-center">
+                <div className="relative flex-row flex items-center justify-center">
+                  <code className="bg-gray-200 text-sm xl:text-lg px-8 py-4 rounded-lg text-gray-800 text-start xl:text-center">
                     <a href="https://www.lorem-johnny.com/api/random-image" target="_blank" rel="noopener noreferrer">
                         https://www.lorem-johnny.com/api/random-image
                     </a>
-                    <button
+                  </code>
+                  <button
                       onClick={() => copyToClipboard(randomImageSrc)}
                       className="ms-5 text-indigo-600 right-10 mt-1 absolute"
                     >
                       {copiedLink === randomImageSrc ? <FaCheck/> : <FaRegCopy/>}
                     </button>
-                  </code>
                 </div>
               </div>
-
-              <div className="bg-gray-50 p-8 rounded-xl shadow-lg">
+            
+            </div>
+              <HorizontalBanner 
+                bannerImage={HorizontalHostinger}
+                mobileBannerImage={HorizontalHostingerMobile}
+                link="https://hostinger.it?REFERRALCODE=J6NVIRAJPEYC" 
+                altText="Special Offer Banner" 
+                className="my-8"
+              />
+            <div className="space-y-8 xl:mx-10">
+              <div className="bg-white p-8 rounded-xl border shadow-lg">
                 <h3 className="text-2xl font-semibold text-indigo-600 mb-4">Get a Profession-Based Image</h3>
                 <p className="text-gray-700 mb-4">
                   Access images for specific professions by calling the <code className="font-bold">/random/:profession</code> route:
                 </p>
-                <div className="relative">
-                  <code className="bg-gray-200 text-lg px-8 py-4 rounded-lg text-gray-800 text-center flex justify-center">
+                <div className="relative flex-row flex items-center justify-center">
+                  <code className="bg-gray-200 text-sm xl:text-lg px-8 py-4 rounded-lg text-gray-800 text-start xl:text-center">
                     <a href="https://www.lorem-johnny.com/api/policeman" target="_blank" rel="noopener noreferrer">
                       https://www.lorem-johnny.com/api/policeman
                     </a>
+                  </code>
                     <button
                       onClick={() => copyToClipboard('https://www.lorem-johnny.com/api/policeman')}
                       className="ms-5 text-indigo-600 right-10 mt-1 absolute"
                     >
                       {copiedLink === 'https://www.lorem-johnny.com/api/policeman' ? <FaCheck/> : <FaRegCopy/>}
                     </button>
-                  </code>
                 </div>
                 <p className="mt-2 text-gray-500">For example, this URL gives you an image of a policeman.</p>
 
@@ -190,13 +205,21 @@ export default function Home() {
             </div>
           </section>
 
+          <HorizontalBanner 
+            bannerImage={HorizontalSaily}
+            mobileBannerImage={HorizontalSailyMobile}
+            link="https://go.saily.site/aff_c?offer_id=101&aff_id=6747&url_id=989" 
+            altText="Special Offer Banner" 
+            className="my-0"
+          />
+
           {/* Example Section */}
-          <section className="px-4 py-8">
+          <section className="xl:px-4 py-8">
             <h2 className="text-4xl font-semibold text-pink-500 mb-8 text-center">Example Usage</h2>
 
             <div className="space-y-12">
               {/* Random Image Section */}
-              <div className="bg-gray-50 p-6 rounded-xl shadow-lg text-center mx-10">
+              <div className="bg-white rounded-xl border shadow-lg p-6 text-center xl:mx-10">
                 <h3 className="text-2xl font-semibold text-indigo-600 mb-4">Random Image</h3>
                 <div>
                   <Image
@@ -207,17 +230,30 @@ export default function Home() {
                     className="rounded-xl shadow-lg mx-auto"
                   />
                 </div>
-                <p className="text-gray-700 my-4">Click below to refresh and get a new random image:</p>
+                <p className="text-gray-700 m-4">Click below to refresh and get a new random image:</p>
                 <button
                   onClick={refreshRandomImage}
-                  className="bg-indigo-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-indigo-700 transition duration-300 mb-6"
+                  className="bg-indigo-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-indigo-700 transition duration-300 mb-6 flex items-center justify-center mx-auto"
                 >
-                  Refresh Random Image
+                  <IoMdSwap  className='me-3'/>
+                  Generate Random Image
                 </button>
               </div>
+            </div>
+          </section>
 
+              <HorizontalBanner 
+                bannerImage={HorizontalHostinger}
+                mobileBannerImage={HorizontalHostingerMobile}
+                link="https://hostinger.it?REFERRALCODE=J6NVIRAJPEYC" 
+                altText="Special Offer Banner" 
+                className="my-0"
+              />
+              
+          <section className="xl:px-4 py-8">
+            <div className="space-y-12">
               {/* Profession-based Image Section */}
-              <div className="bg-gray-50 p-6 rounded-xl shadow-lg text-center mx-10">
+              <div className="bg-white rounded-xl border shadow-lg p-6 text-center xl:mx-10">
                 <h3 className="text-2xl font-semibold text-indigo-600 mb-4">Profession Image</h3>
                 <p className="text-gray-700 mb-4">
                   Enter a profession below to view the corresponding image:
@@ -237,10 +273,9 @@ export default function Home() {
                     />
                   )}
                 </div>
-                <p className="text-gray-500 my-4">This URL generates an image for the specified profession.</p>
+                <p className="text-gray-500 m-4">This URL generates an image for the specified profession.</p>
                 <div className="flex items-center justify-center space-x-4 mb-4">
-                  <span className="text-gray-800">URL:</span>
-                  <span className="text-gray-500 bg-gray-200 px-4 py-2 rounded-lg">
+                  <span className="text-gray-500 bg-gray-200 px-4 py-2 rounded-lg text-[0.8rem]">
                     https://www.lorem-johnny.com/api/
                   </span>
                   <input
@@ -256,10 +291,10 @@ export default function Home() {
           </section>
 
           {/* Buy Me a Coffee Section */}
-          <section className="bg-gray-100 py-12 mt-12 rounded-xl shadow-lg mx-10">
+          <section className="bg-gray-900 py-12 mt-6 shadow-lg">
             <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-indigo-500">Support lorem-johnny.com 🙏</h2>
-              <p className="text-lg text-gray-600 mt-4 mx-10">If you find Lorem-Johnny useful and would like to support the page, consider buying us a coffee! ☕ Every little bit helps us keep improving and adding new features.</p>
+              <h2 className="text-3xl font-bold text-white">Support lorem-johnny.com 🙏</h2>
+              <p className="text-lg text-white mt-4 mx-10">If you find Lorem-Johnny useful and would like to support the page, consider buying us a coffee! Every little bit helps us keep improving and adding new features.</p>
             </div>
 
             <div className="flex justify-center items-center space-x-6">
@@ -267,17 +302,17 @@ export default function Home() {
                 href="https://buymeacoffee.com/virajperera"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#fc5185] text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:scale-[1.05] transition duration-300"
+                className="bg-[#fc5185] text-white font-semibold py-3 px-8 rounded-md shadow-lg hover:scale-[1.05] transition duration-300"
               >
-                Buy Me a Coffee
+               ☕ Buy Me a Coffee
               </a>
             </div>
           </section>
 
           {/* Footer */}
-          <footer className="bg-gray-900 text-white py-8 mt-12 text-center rounded-b-3xl">
+          {/* <footer className="bg-black text-white py-8 text-center">
             <p>&copy; {new Date().getFullYear()} lorem-johnny.com All rights reserved.</p>
-          </footer>
+          </footer> */}
         </div>
       </div>
     </>
